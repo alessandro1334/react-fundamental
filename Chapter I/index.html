@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+
+    <body>
+        <div id="root"></div>
+
+        <!-- Javascript -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react@17/umd/react.development.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+        ></script>
+        <script type="text/babel">
+            /**
+        const root = document.querySelector('#root');
+        console.log(root);
+  
+        const element = document.createElement('h1');
+        console.log(element);
+  
+        element.textContent = 'Hello World';
+        element.className = 'heading-1';
+  
+        root.appendChild(element); 
+        **/
+            const root = document.querySelector('#root');
+
+            // const element = React.createElement("h1", {
+            //     children: "Hello from React!",
+            //     className: "heading-1",
+            // });
+
+            // const p1 = React.createElement("p", {
+            //     children: "Hello from React!",
+            // });
+
+            // const p2 = React.createElement("p", {
+            //     children: "Hello from React!",
+            // });
+
+            // const element = React.createElement("div", {
+            //     children: [p1, p2],
+            // });
+
+            // Render using React Fregment (Render without element parents)
+            // const element = React.createElement(React.Fragment, {
+            //     children: [p1, p2],
+            // });
+
+            // const element = React.createElement("ul",
+            //     { className: "list" },
+            //     React.createElement("li", null, "Apple"),
+            //     React.createElement("li", null, "Monggo"),
+            //     React.createElement("li", null, "Grape"),
+            // );
+
+            // Using jsx
+            // const element = (
+            //     <ul className="ul-1">
+            //         <li>Apple</li>
+            //         <li>Orange</li>
+            //         <li>Grape</li>
+            //     </ul>
+            // );
+
+            // function upperCase(text) {
+            //     return text.toUpperCase();
+            // }
+
+            // const text = "Hello World"
+            // const element = <h1>{ upperCase(text) }</h1>;
+
+            // const sampleClassName = "heading-1";
+            // const element = <h1 className={sampleClassName}>Hello World</h1>;
+
+            // const images =
+            //     'https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg';
+
+            // /> step closing
+            // const element = <img src={images} />;
+
+            // try using react component
+            // function Halo(props) {
+            //     return (
+            //         <p>
+            //             Hello <b>{props.name}</b>
+            //         </p>
+            //     );
+            // }
+
+            // const element = (
+            //     <>
+            //         <Halo name="Test1" />
+            //         <Halo name="Test2" />
+            //     </>
+            // );
+
+            function tick() {
+                // using react
+                const element = (
+                    <div>
+                        <h1>Jam Sekarang</h1>
+                        <h2>{new Date().toLocaleTimeString()}</h2>
+                    </div>
+                );
+
+                ReactDOM.render(element, root);
+
+                // using javascript
+                // const element = `
+                //     <div>
+                //         <h1>Jam Sekarang</h1>
+                //         <h2>${new Date().toLocaleTimeString()}</h2>
+                //     </div>
+                // `;
+                // root.innerHTML = element;
+            }
+
+            tick();
+
+            setInterval(() => {
+                tick();
+            }, 1000);
+        </script>
+    </body>
+</html>
